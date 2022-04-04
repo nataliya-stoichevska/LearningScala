@@ -13,7 +13,7 @@ object Sequences extends App{
   //Ranges
   val aRange: Seq[Int] = 1 to 10
   val aRangeUntil: Seq[Int] = 1 until 10 //all the numbers with the right and noninclusive
-  //aRange.foreach(println("  "))
+  //aRange.foreach(println())
 
   //eg usage
   (1 to 10).foreach(x => println("Hello"))

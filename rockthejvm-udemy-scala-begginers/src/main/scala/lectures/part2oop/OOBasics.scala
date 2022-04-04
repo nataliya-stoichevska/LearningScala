@@ -41,25 +41,6 @@ class Person(name: String, val age: Int = 0) /*constructor*/{
   def this() = this("John Doe")
 }
 
-/*
-  Implement a Novel and a Writer
-  Writer: first name, surname, year
-    -method fullname
-  Novel: name, year of release, author
-    -authorAge
-    -isWrittenBy(author)
-    -copy(new year of release) = new instance of novel
-*/
-class Writer(firstName: String, surname: String, val year: Int){
-  def fullname(): String =
-    firstName + " " + surname
-}
-
-class Novel(name: String, yearOfRelease: Int, author: Writer){
-  def authorAge = yearOfRelease - author.year
-  def isWrittenBy(author: Writer) = author == this.author
-  def copy(newYear: Int): Novel = new Novel(name, newYear, author)
-}
 
 /*
   Counter class
@@ -92,4 +73,23 @@ class Counter(val n: Int = 0){
   def print = println(count)
 }
 //class parameters are not FIELDS person.age -err - we need to add val before age
+}
+/*
+  Implement a Novel and a Writer
+  Writer: first name, surname, year
+    -method fullname
+  Novel: name, year of release, author
+    -authorAge
+    -isWrittenBy(author)
+    -copy(new year of release) = new instance of novel
+*/
+class Writer(firstName: String, surname: String, val year: Int){
+  def fullname(): String =
+    firstName + " " + surname
+}
+
+class Novel(name: String, yearOfRelease: Int, author: Writer){
+  def authorAge = yearOfRelease - author.year
+  def isWrittenBy(author: Writer) = author == this.author
+  def copy(newYear: Int): Novel = new Novel(name, newYear, author)
 }

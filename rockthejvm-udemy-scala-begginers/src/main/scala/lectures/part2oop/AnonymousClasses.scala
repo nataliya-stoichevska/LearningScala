@@ -32,6 +32,6 @@ object AnonymousClasses extends App {
   //we should pass the parameters even anonymously
   //make sure we override all of the super fields or methods
   val jim = new Person ("Jim") {
-    override def sayHi: Unit = "Hi I am Jim!"
+    override def sayHi: Unit = println("Hi I am Jim!")
   }
 }
